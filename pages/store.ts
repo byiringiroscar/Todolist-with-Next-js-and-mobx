@@ -26,6 +26,11 @@ class Store{
   constructor() {
     makeAutoObservable(this)
   }
+  load(url: string){
+    fetch(url)
+    .then((res) => res.json())
+    .then((todos) => (this.todos = todos));
+  }
 
   addTodo() {
     this.todos = addTodo(this.todos, this.newTodo);

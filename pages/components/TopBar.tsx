@@ -8,11 +8,7 @@ JSON source: https://raw.githubusercontent.com/jherr/todos-four-ways/master/data
 */
 
 function TopBar() {
-  const onLoad = () => {
-    fetch("https://raw.githubusercontent.com/jherr/todos-four-ways/master/data/todos.json"
-    ).then((res) => res.json())
-    .then((data) => store.todos = data)
-  }
+  const onLoad = () => store.load("https://raw.githubusercontent.com/jherr/todos-four-ways/master/data/todos.json")
   return (
     <Grid pt={2} templateColumns="1fr 1fr" columnGap="3">
       <ColorModeSwitcher />
