@@ -6,7 +6,6 @@ import TopBar from './components/TopBar';
 import TodoAdd from './components/TodoAdd';
 import TodoList from './components/TodoList';
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
